@@ -1,4 +1,5 @@
 import sys
+import time
 
 def dfs(n, solutions, temp_solution):
     if len(temp_solution)==n:
@@ -14,11 +15,18 @@ def dfs(n, solutions, temp_solution):
     for i in range(n):
         if check(temp_solution, i):
             temp_solution.append(i)
-            dfs(solutions, temp_solution)
+            dfs(n, solutions, temp_solution)
             temp_solution.pop()
 
+
+
 if __name__ == '__main__':
-    n = sys.argv[0]
+
+    n = int(sys.argv[1])
+
     solutions = []
-    dfs(solutions, [], n)
+    first = time.time()
+    dfs(n, solutions, [])
+    second = time.time()
+    print(f"Elapsed time: {second - first}")
     print(len(solutions))
