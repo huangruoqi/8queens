@@ -24,7 +24,7 @@ class SampleScene(Scene):
                 image=IMAGE("play-solid.png"),
                 height=50,
                 x=130,
-                y=700,
+                y=690,
                 animation="opacity",
                 parameter={"factor": 0.5},
                 on_click=lambda: self.play()
@@ -36,7 +36,7 @@ class SampleScene(Scene):
                 image=IMAGE("arrow-right-solid.png"),
                 height=50,
                 x=530,
-                y=700,
+                y=690,
                 animation="opacity",
                 parameter={"factor": 0.5},
                 on_click=lambda: self.next()
@@ -59,21 +59,21 @@ class SampleScene(Scene):
                     Block(width=60, height=60, x=j * 80 + 40, y=i * 80 + 40),
                     layer_number=2,
                 )
-        self.add("label", Text("Speed:", x=250, y=700, size=30, align_mode="CENTER"))
+        self.add("label", Text("Speed:", x=250, y=690, size=30, align_mode="CENTER"))
         self.add(
             "slider",
             Slider(
                 on_change=change_speed,
                 interval=[1, 61],
                 x=370,
-                y=700,
+                y=690,
                 animation="opacity",
                 parameter={"factor": 0.5},
                 on_click=lambda: 0,
             ),
         )
         bg.fill((150, 150, 150))
-        self.add("slider_bg", Container(bg, width=100, height=20, x=370, y=700))
+        self.add("slider_bg", Container(bg, width=100, height=20, x=370, y=690))
         solutions = []
         self.gen = dfs(solutions, [])
         self.total_time = 0

@@ -4,8 +4,14 @@ run:
 	poetry install
 	poetry run python -B index.py
 
-black:
-	poetry run black ./
+# If the first argument is "nqueens"
+ifeq (version,$(firstword $(MAKECMDGOALS)))
+  RUN_ARGS := $(wordlist 2,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+  $(eval $(RUN_ARGS):;@:)
+endif
+
+nqueens:
+	poetry run python -B nqueens.py $(RUN_ARGS)
 
 # If the first argument is "version"
 ifeq (version,$(firstword $(MAKECMDGOALS)))
