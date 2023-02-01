@@ -9,7 +9,7 @@ class App:
         GAME_RESOLUTION = (width, height)
         screen = pygame.display.set_mode(GAME_RESOLUTION)
         self.scene = scene_class(screen, width, height)
-        pygame.display.set_caption("Title")
+        pygame.display.set_caption("8 Queens")
         # Icon = IMAGE("icon.png") # add your own icon image
         # pygame.display.set_icon(Icon)
         pygame.mouse.set_visible(False)
