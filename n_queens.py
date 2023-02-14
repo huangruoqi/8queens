@@ -21,12 +21,10 @@ def dfs(n, solutions, temp_solution):
 
 
 if __name__ == '__main__':
-
     n = int(sys.argv[1])
-
     solutions = []
     first = time.time()
     dfs(n, solutions, [])
     second = time.time()
-    print(f"Elapsed time: {second - first}")
-    print(len(solutions))
+    print(f"Elapsed time: {second - first} seconds")
+    print(f"Number of solutions: {len(solutions)}")
