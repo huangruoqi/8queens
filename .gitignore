@@ -1,6 +1,3 @@
 .vscode/
 __pycache__/
-build/
-dist/
-index.spec
-*.zip
+

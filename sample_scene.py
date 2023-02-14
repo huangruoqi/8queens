@@ -11,7 +11,6 @@ from eight_queens import dfs
 import pygame
 from pygame.locals import *  # noqa
 
-
 class SampleScene(Scene):
     def __init__(self, screen, *args, **kwargs):
         super(SampleScene, self).__init__(screen, *args, **kwargs)
